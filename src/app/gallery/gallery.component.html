@@ -1,0 +1,14 @@
+
+<div class="gallery_grid" (click)="slideRunner()">
+<div>
+<img [src]="slides[currentslider].image">
+</div>
+</div>
+
+<!--indicator uses ngStyle conditional depending on currentslider value.-->
+
+<div class="gallery_grid"> 
+    <div class="sliderindicator" [ngStyle]="{'background-color': currentslider === 0 ? 'black' : 'crimson'}"></div>
+    <div class="sliderindicator" [ngStyle]="{'background-color': currentslider === 1 ? 'black' : 'crimson'}"></div>
+    <div class="sliderindicator" [ngStyle]="{'background-color': currentslider === 2 ? 'black' : 'crimson'}"></div>
+</div>

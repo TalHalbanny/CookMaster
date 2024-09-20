@@ -1,0 +1,30 @@
+<div class="nav_base">
+<div class="grid_container">
+    <div class="nav_item"><button class="nav_button">About Us</button></div>
+    <div class="nav_item"><button class="nav_button">Contact Us</button></div>
+    <div class="nav_item"><button class="nav_button">Recipes</button></div>
+    <div class="nav_item"><button class="nav_button" (click)="show()" (dblclick)="hide()">Brands 🢗</button></div>
+    <div class="nav_item"><button class="nav_button">Skillets</button></div>
+    <div class="nav_item"><button class="nav_button">Silverware</button></div>
+    <div class="nav_item"><button class="nav_button">Pots</button></div>
+    <div class="nav_item"><button class="nav_button">Chef's Series</button></div>
+</div>
+</div>
+
+<div class="grid_container">
+<div class="nav_item"></div>
+<div class="nav_item"></div>
+<div class="nav_item"></div>
+<div class="nav_underlist" [ngStyle]="{'display':displayVal}">
+    <div class="grid_underlist_container">
+        <button class="nav_list_button">Ninja</button>
+        <button class="nav_list_button">Arcosteel</button>
+        <button class="nav_list_button">Midea</button>
+        <button class="nav_list_button">Swiss</button>
+    </div>
+</div>
+<div class="nav_item"></div>
+<div class="nav_item"></div>
+<div class="nav_item"></div>
+<div class="nav_item"></div>
+</div>
