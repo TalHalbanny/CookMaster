@@ -2,6 +2,7 @@
     background-color: crimson;
     height:50px;
     width:100%;
+   
 }
 
 .grid_container {
@@ -43,6 +44,7 @@ text-align: center;
     border:none;
     transition: 0.4s;
     background-color: crimson;
+    color: white;
 }
 
 .nav_list_button:hover {
