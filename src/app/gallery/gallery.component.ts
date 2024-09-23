@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 
 @Component({
   selector: 'app-gallery',
@@ -21,8 +20,16 @@ export class GalleryComponent {
 
   currentslider = 0;
   currentIndicatorColor = 'coral';
+  intervalId: any;
 
-  slideRunner() {
+  ngOnInit(){
+
+    this.intervalId = setInterval(() => this.slideRunner(),3000);
+
+  }
+
+slideRunner() {
+  
     if (this.currentslider < this.slides.length - 1) {
       this.currentslider = this.currentslider + 1;
     } else {
@@ -31,3 +38,5 @@ export class GalleryComponent {
   }
 
 }
+
+
