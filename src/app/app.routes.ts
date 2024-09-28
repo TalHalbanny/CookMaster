@@ -1,11 +1,16 @@
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecipesComponent } from './recipes/recipes.component';
-
+import { HomepageComponent } from './homepage/homepage.component';
 
 export const routes: Routes = [
-    {
-        path: "Recipes", component: RecipesComponent
-    }
+  { path: '', component: HomepageComponent },  // Default route (homepage)
+  { path: 'Recipes', component: RecipesComponent }, // Route for Recipes
+  { path: '**', redirectTo: '' } // Wildcard route for unknown paths
 ];
 
-
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

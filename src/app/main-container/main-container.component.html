@@ -1,10 +1,16 @@
+<nav>
+    <div class="nav-grid">
+        <h2 class="websitelogo">Cookmaster™</h2>
+        <button>About Us</button>
+        <button>Contact Us</button>
+        <button [routerLink]="['/Recipes']">Recipes</button> 
+        <button>Chef's Shop</button>
+        <button>Brands Shop</button>
+        <button>Latest Articles</button>
+    </div>
+</nav>
 
-<div class="container-fluid text-center">
-<app-navigator></app-navigator>
-<app-homepage-head></app-homepage-head>
-<br>
-<app-gallery></app-gallery>
-<app-homepage-cards></app-homepage-cards>
+
+<div>
+<router-outlet></router-outlet>
 </div>
-
-

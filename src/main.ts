@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom, NgModule } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import 'zone.js';
 import { MainContainerComponent } from './app/main-container/main-container.component';
-import { provideRouter, Router } from '@angular/router';
 import { routes } from './app/app.routes';
-import { RecipesComponent } from "./app/recipes/recipes.component";
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MainContainerComponent, RecipesComponent,RouterOutlet],
+  imports: [MainContainerComponent],
   template: `
     <div>
     <app-main-container></app-main-container>
@@ -20,9 +19,11 @@ import { RouterOutlet } from '@angular/router';
   `,
 })
 export class App {}
+bootstrapApplication(App,
+  {
+    providers:[
+      importProvidersFrom(RouterModule.forRoot(routes))
+    ]
+  }
+);
 
-bootstrapApplication(App, { 
-  providers: [
-    provideRouter(routes)
-  ]
-});
