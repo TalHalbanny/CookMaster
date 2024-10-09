@@ -27,6 +27,13 @@ nav {
     font-family: coolvetica;
     color: white;
     margin-left:10px; 
+    margin-top:3px;
+    cursor:pointer;
+    transition: 0.4s;
+}
+
+.websitelogo:hover {
+    color: coral;
 }
 
 button {

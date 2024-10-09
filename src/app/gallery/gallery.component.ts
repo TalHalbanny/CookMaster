@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
 })
+
 export class GalleryComponent {
+
   slides = [ //add or remove images from slider.
     {image: 'https://esmmweighless.com/wp-content/uploads/2019/12/Carolyn-Cooking-Blog.jpg'},
     {image: 'https://www.thespruceeats.com/thmb/EEoo7AQ8pKWXVC6RJEcMpPUA1GA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/country-breakfast-skillet-recipe-3056473-Hero_01-c1af3dae64054fc480c668f205d9514c.jpg'},
@@ -18,7 +20,7 @@ export class GalleryComponent {
 
   //slider-running slides function.
 
-  currentslider = 0;
+  currentslider = 0; //slider index 
   currentIndicatorColor = 'coral';
   intervalId: any;
 
@@ -30,10 +32,10 @@ export class GalleryComponent {
 
 slideRunner() {
   
-    if (this.currentslider < this.slides.length - 1) {
+    if (this.currentslider < this.slides.length - 1) { //if current index is not at the end of the array, move one slide forward.
       this.currentslider = this.currentslider + 1;
     } else {
-      this.currentslider = 0;
+      this.currentslider = 0; //if its the last slider, current index is 0, repeat slider.
     }
   }
 
