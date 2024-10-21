@@ -1,0 +1,17 @@
+
+<div class="container">
+<div class="card m-3">
+<img src="assets/PP.jpeg" class="card-img">
+<div class="card-img-overlay d-flex justify-content-center align-items-center">
+    <h1 class="d-flex align-items-center justify-content-center">Brands Shop</h1>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid">
+<div class="row row-cols-4 d-flex justify-content-center ">
+<app-shop-card-build *ngFor="let item of saleItems" [itemName]="item.itemName" [itemDes]="item.itemDes" [pic]="item.pic" [link]="item.link"></app-shop-card-build>
+</div>
+</div>
+

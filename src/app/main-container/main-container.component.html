@@ -1,15 +1,17 @@
-<nav>
-    <div class="nav-grid">
-        <h2 [routerLink]="['']" class="websitelogo">Cookmaster™</h2>
-        <button>About Us</button>
-        <button>Contact Us</button>
-        <button [routerLink]="['/Recipes']">Recipes</button> 
-        <button>Chef's Shop</button>
-        <button>Brands Shop</button>
-        <button>Latest Articles</button>
+
+    
+
+<nav class="navbar">
+    <div class="nav-grid container-fluid">
+        <h2 class="websitelogo" [routerLink]="['']">Cookmaster</h2>
+        <button class="uniqueffect">About Us</button>
+        <button class="uniqueffect">Contact Us</button>
+        <button [routerLink]="['/Recipes']" class="uniqueffect">Recipes</button> 
+        <button class="uniqueffect">Chef's Shop</button>
+        <button [routerLink]="['/BrandsShop']" class="uniqueffect">Brands Shop</button>
+        <button class="uniqueffect">Latest Articles</button>
     </div>
 </nav>
-
 
 <div>
 <router-outlet></router-outlet>

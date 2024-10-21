@@ -10,26 +10,22 @@ nav {
 
 .nav-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: repeat(7,1fr)  ;
     grid-template-rows: 1;
+    margin: 0px;
+    gap:0px;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: left;
-    margin-left: 10px;
-    font-family:'coolvetica';
-    color: white;
-    width:180px;
-}
+
 
 .websitelogo {
     font-family: coolvetica;
     color: white;
-    margin-left:10px; 
-    margin-top:3px;
     cursor:pointer;
     transition: 0.4s;
+    margin: 0;
+    text-align: left;
+    margin-right: 150px;
 }
 
 .websitelogo:hover {
@@ -37,16 +33,53 @@ nav {
 }
 
 button {
-    margin:10px;
     border: none;
-    background-color: crimson;
+    background-color: transparent;
     color: white;
     transition:0.4s;
     border-radius: 10px;
-}
-
-button:hover {
-    background:salmon;
+    margin: 5px;
 }
 
 
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: crimson; 
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray; 
+    top: 0px;
+}
+
+.uniqueffect {
+    color: white#000;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .uniqueffect::before {
+    background: hsl(0, 75%, 69%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .uniqueffect:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Presentational styles */
+  body {
+    display: grid;
+    font-family: system-ui, sans;
+    font-size: 3.5rem;
+    font-weight: 800;
+    height: 100vh;
+    place-items: center;
+  }

@@ -9,8 +9,8 @@ import { GalleryComponent } from "../gallery/gallery.component";
   imports: [HomepageCardsComponent, GalleryComponent],
   template:`
   <br>
-  <div style="justify-content: center; text-align:center;">
   <app-gallery></app-gallery>
+  <div style="justify-content: center; text-align:center;">
   <br>
   <app-homepage-cards></app-homepage-cards>
   </div>
